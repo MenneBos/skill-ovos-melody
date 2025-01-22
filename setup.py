@@ -1,14 +1,14 @@
 from setuptools import setup
 
 setup(
-    name='mycroft-melody-skill',
+    name='ovos-skill-melody',
     version='0.1',
     description='A skill to play a melody',
-    url='http://github.com/yourusername/mycroft-melody-skill',
-    author='Your Name',
+    url='http://github.com/MenneBos/ovos-skill-melody',
+    author='Menne',
     author_email='your.email@example.com',
     license='Apache-2.0',
-    packages=['mycroft-melody-skill'],
+    packages=['ovos-skill-melody'],
     install_requires=[
         'ovos_workshop'
     ],
