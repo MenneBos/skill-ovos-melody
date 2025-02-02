@@ -47,7 +47,7 @@ setup(
     name='ovos-skill-melody',
     version='0.1',
     description='A skill to play a melody',
-    url='https://github.com/MenneBos/ovos-skill-melody',
+    url='https://github.com/MenneBos/skill-ovos-melody',
     author='Menne',
     author_email='your.email@example.com',
     license='Apache-2.0',
