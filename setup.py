@@ -1,6 +1,7 @@
 import os
 from setuptools import setup
 from os import walk, path
+from os.path import join, dirname
 
 URL = "https://github.com/OpenVoiceOS/skill-ovos-hello-world"
 SKILL_CLAZZ = "HelloWorldSkill"  # needs to match __init__.py class name
