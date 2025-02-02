@@ -3,9 +3,9 @@ from setuptools import setup
 from os import walk, path
 from os.path import join, dirname
 
-URL = "https://github.com/OpenVoiceOS/skill-ovos-melody"
-SKILL_CLAZZ = "HelloWorldSkill"  # needs to match __init__.py class name
-PYPI_NAME = "ovos-skill-hello-world"  # pip install PYPI_NAME
+URL = "https://github.com/MenneBos/skill-ovos-melody"
+SKILL_CLAZZ = "MelodySkill"  # needs to match __init__.py class name
+PYPI_NAME = "ovos-skill-melody"  # pip install PYPI_NAME
 
 # below derived from github url to ensure standard skill_id
 SKILL_AUTHOR, SKILL_NAME = URL.split(".com/")[-1].split("/")
