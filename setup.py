@@ -3,7 +3,7 @@ from setuptools import setup
 from os import walk, path
 from os.path import join, dirname
 
-URL = "https://github.com/OpenVoiceOS/skill-ovos-hello-world"
+URL = "https://github.com/OpenVoiceOS/skill-ovos-melody"
 SKILL_CLAZZ = "HelloWorldSkill"  # needs to match __init__.py class name
 PYPI_NAME = "ovos-skill-hello-world"  # pip install PYPI_NAME
 
