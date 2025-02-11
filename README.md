@@ -9,3 +9,11 @@ def help dit is code
 ```mermaid
   info
 ```
+---
+
+| Rank | Hobbies   |
+|-----:|---------------|
+|     1|        snowboarding       |
+|     2|             coding  |
+|     3|            gaming   |
+> let's start gaming
