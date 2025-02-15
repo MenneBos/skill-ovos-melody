@@ -1,1 +1,1 @@
-ovos_workshop
+ovos_workshop 3.3.6a1
