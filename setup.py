@@ -68,7 +68,7 @@ with open(path.join(path.abspath(path.dirname(__file__)), "README.md"), "r") as 
 
 setup(
     name='ovos-skill-melody',
-    version='0.1',
+    version=get_version(),
     description='A skill to play a melody',
     url='https://github.com/MenneBos/skill-ovos-melody',
     author='Menne',
