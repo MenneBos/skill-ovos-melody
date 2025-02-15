@@ -1,4 +1,4 @@
-1. install OVOS op Raspberry PI 4B
+# 1 install OVOS op Raspberry PI 4B
 
 Start ovos-messagebus.service
 No logs, found one line in skills logs
@@ -33,21 +33,21 @@ Openwakework plugin was al geinstalleerd
 nu werk het goed.....
 
 
-2. installeren ovos-skill-melody
+# 2. installeren ovos-skill-melody
 Plaats mp3 file in ./local/share
 update pip
 pip install git+....
 
 nu werkt de uitgesproken tekst en audio file goed...
 
-3. Download Jarvis voice records with sftp
+# 3. Download Jarvis voice records with sftp
 on windows a ssh client is running
 use sftp op ovos@raspOVOS
 gebruikt ls for folder on service linux en lls for local op windows
 gebruikt cd for service en lcd for windows
 verander melody met Jarvis what is it you are trying
 
-4. Bouw in melody een get request 
+# 4. Bouw in melody een get request 
     url = f"https://api.open-meteo.com/v1/forecast"
     data = sliced(requests.get(url, params=args).json())
     return WeatherReport(data)
