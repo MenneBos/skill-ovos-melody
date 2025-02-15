@@ -52,9 +52,11 @@ verander melody met Jarvis what is it you are trying
     data = sliced(requests.get(url, params=args).json())
     return WeatherReport(data)
 
-Backlog: verander I'm ready text in Jarvis startup mp3
-Backlog: verander alarm met Jarvis wakeup
-Backlog: bij licht commando jarvis as you wish
-Backlog: Verander foute tekst in Jarvis impossible to synthesize
-Backlog: Verander who are you in jarvis start up
-Backlog: Gebruikt XTTS2 om Jarvis stem te klonen
+# 5. Backlog
+
+|Backlog1:| verander I'm ready text in Jarvis startup mp3|
+|Backlog2:| verander alarm met Jarvis wakeup|
+|Backlog3:| bij licht commando jarvis as you wish|
+|Backlog4:| Verander foute tekst in Jarvis impossible to synthesize|
+|Backlog5:| Verander who are you in jarvis start up|
+|Backlog6:| Gebruikt XTTS2 om Jarvis stem te klonen|
