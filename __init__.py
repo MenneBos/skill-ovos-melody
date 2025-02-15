@@ -13,7 +13,8 @@ class MelodySkill(OVOSSkill):
 
     def handle_play_melody(self, message: Message):
         self.speak_dialog("PlayMelody")
-        self.play_audio(self.melody_file)
+        self.play_audio("melody.mp3")
+        #self.play_audio(self.melody_file)
 
 def create_skill():
     return MelodySkill()
