@@ -13,8 +13,7 @@ class MelodySkill(OVOSSkill):
 
     def handle_play_melody(self, message: Message):
         self.speak_dialog("PlayMelody")
-        self.play_audio("/home/ovos/.local/share/melody.mp3") # located in /home/ovos/.venvs/ovos/lib/python3.11/site-packages/ovos_audio/res/snd/
-        #self.play_audio(self.melody_file)
+        self.play_audio("/home/ovos/.local/share/What_Is_It_You_Are_Trying_To_Achieve_Sir.mp3") 
 
 def create_skill():
     return MelodySkill()
