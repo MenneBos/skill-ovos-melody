@@ -2,6 +2,7 @@ import os
 from setuptools import setup
 from os import walk, path
 from os.path import join, dirname
+from setuptools import setup, find_packages
 
 URL = "https://github.com/MenneBos/skill-ovos-melody"
 SKILL_CLAZZ = "MelodySkill"  # needs to match __init__.py class name
