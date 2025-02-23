@@ -57,7 +57,8 @@ verander melody met Jarvis what is it you are trying
 
 # 4. Bouw in melody een get request 
 Gebruik de volgende code\
-Check RbPI network Sandbox with Homey network Ziggo
+Check RbPI network Sandbox with Homey network Ziggo\
+Add in Securty tab of UniFi to block ip rage 192.168.1.1 -192.168.1.44 & 192.168.1.46-192.168.255.255
 ```python
   import requests
   url = f"http://192.168.1.45/api/manager/logic/webhook/Kantoor/?tag=Menne"
