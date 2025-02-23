@@ -30,6 +30,11 @@ Chromium plugin was al geinstalleerd
 I changed to wake word to Jarvis by mycroft.conf 
 Openwakework plugin was al geinstalleerd
 
+I disabled WiFi, as connection is on-off and it is cabled anywat
+sudo systemctl disable wpa_supplicant
+sudo systemctl stop wpa_supplicant
+sudo systemctl status wpa_supplicant
+
 nu werk het goed.....
 
 
@@ -48,16 +53,29 @@ gebruikt cd for service en lcd for windows
 verander melody met Jarvis what is it you are trying
 
 # 4. Bouw in melody een get request 
-    url = f"https://api.open-meteo.com/v1/forecast"
-    data = sliced(requests.get(url, params=args).json())
+Bouw in melody een get request 
+    import requests
+    url = f"http://192.168.1.45/api/manager/logic/webhook/Kantoor/?tag=Menne"
+	url = f"http://192.168.1.45/api/manager/logic/webhook/Terre/?tag=SkyRadio"
+    data = requests.get(url, params=args).json()
     return WeatherReport(data)
 
-# 5. Backlog
+# 5. verander I'm ready text in Jarvis startup mp3
+Het bericht dat de boot is afgerond staat in skill_ovos_boot_finished
+In deze code kan je kiezen tussen een dialog gesporken tekst of een sound.
+Plaats in conf twee regels
+"speak_ready": false,
+"ready_sound": true,
+In __init__ code op regel 191 de code vervangen met 
+self.play_audio("/home/ovos/.local/share/Voicy_Jarvis_Start_Up.mp3", False)
+Adjustment: Speak is still used even is "speak_ready": false, or removed at all.
+Check code and remove the IF statement in lines 193-194.
+play mp3 fils with mpg123 file
+
+# Backlog
 | Backlog| Item|
 | ------| -----|
-|Backlog1:| verander I'm ready text in Jarvis startup mp3|
-|Backlog2:| verander alarm met Jarvis wakeup|
-|Backlog3:| bij licht commando jarvis as you wish|
-|Backlog4:| Verander foute tekst in Jarvis impossible to synthesize|
-|Backlog5:| Verander who are you in jarvis start up|
-|Backlog6:| Gebruikt XTTS2 om Jarvis stem te klonen|
+|Backlog:| verander alarm met Jarvis wakeup|
+|Backlog:| bij licht commando jarvis as you wish|
+|Backlog:| Verander uitgesproken tekst in ovos als ie het niet begrijpt met impossible_to_synthesize|
+|Backlog:| Gebruikt XTTS2 om Jarvis stem te klonen: je kan de hele setup plus UI vinden bij https://github.com/BoltzmannEntropy/xtts2-ui|

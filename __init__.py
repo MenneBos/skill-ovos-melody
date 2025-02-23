@@ -1,6 +1,7 @@
 from ovos_workshop.skills.ovos import OVOSSkill
 from ovos_bus_client.message import Message
 import os
+import requests
 
 class MelodySkill(OVOSSkill):
     def __init__(self):
@@ -14,6 +15,8 @@ class MelodySkill(OVOSSkill):
     def handle_play_melody(self, message: Message):
         self.speak_dialog("PlayMelody")
         self.play_audio("/home/ovos/.local/share/What_Is_It_You_Are_Trying_To_Achieve_Sir.mp3", False) 
+        url = f"http://192.168.1.45/api/manager/logic/webhook/Kantoor/?tag=Menne"
+        requests.get(url, params=args).json()
 
 def create_skill():
     return MelodySkill()
