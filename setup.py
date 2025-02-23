@@ -50,7 +50,7 @@ def get_version():
     
 
 def find_resource_files():
-    resource_base_dirs = ("locale", "ui", "vocab", "dialog", "regex", "skill")
+    resource_base_dirs = ("locale", "soundbytes", "ui", "vocab", "dialog", "regex", "skill")
     base_dir = path.dirname(__file__)
     package_data = ["*.json"]
     for res in resource_base_dirs:
@@ -80,10 +80,4 @@ setup(
     include_package_data=True,
     keywords='ovos skill plugin',
     entry_points={'ovos.plugin.skill': PLUGIN_ENTRY_POINT}
-    # packages=['ovos-skill-melody'],
-    #install_requires=[
-    #    'ovos_workshop'
-    #],
-    #include_package_data=True,
-    #zip_safe=False
 )
