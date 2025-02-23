@@ -57,6 +57,7 @@ verander melody met Jarvis what is it you are trying
 
 # 4. Bouw in melody een get request 
 Gebruik de volgende code
+Check RbPI network Sandbox with Homey network Ziggo
 ```python
   import requests
   url = f"http://192.168.1.45/api/manager/logic/webhook/Kantoor/?tag=Menne"
