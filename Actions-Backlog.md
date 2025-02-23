@@ -55,11 +55,11 @@ verander melody met Jarvis what is it you are trying
 
 # 4. Bouw in melody een get request 
 Gebruik de volgende code
-import requests
-url = f"http://192.168.1.45/api/manager/logic/webhook/Kantoor/?tag=Menne"
-url = f"http://192.168.1.45/api/manager/logic/webhook/Terre/?tag=SkyRadio"
-data = requests.get(url)
-print(data.json())
+  import requests
+  url = f"http://192.168.1.45/api/manager/logic/webhook/Kantoor/?tag=Menne"
+  url = f"http://192.168.1.45/api/manager/logic/webhook/Terre/?tag=SkyRadio"
+  data = requests.get(url)
+  print(data.json())
 
 # 5. verander I'm ready text in Jarvis startup mp3
 Het bericht dat de boot is afgerond staat in skill_ovos_boot_finished
