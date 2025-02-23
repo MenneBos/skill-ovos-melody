@@ -57,15 +57,18 @@ play mp3 files with mpg123 file
 nu werkt de uitgesproken tekst en audio file goed...
 
 # 3. Download Jarvis voice records with sftp
-Ik heb de soundbytes folder in GitHub toegevoegd. In deze folder staan de genormaliseerde jarvis soundclips (wav and mp3)
-Bij een pip install komen die in ~/.venvs/ovos/lib/python3.11/site-packages/ovos_skill_melody/soundbytes
-Connect via config file met juiste pad
+Ik heb de soundbytes folder in GitHub toegevoegd. In deze folder staan de genormaliseerde jarvis soundclips (wav and mp3)\
+Bij een pip install komen die in ~/.venvs/ovos/lib/python3.11/site-packages/ovos_skill_melody/soundbytes\
+Update config file met juiste pad, update ovos-skill-boot-finished, deze __init.py__\
+Include MANIFEST.in file met path naar sound bytes files
 
+?
 on windows a ssh client is running\
 use sftp op windows cmdline: >sftp ovos@192.168.5.126\
 gebruikt ls for folder on service linux en lls for local op windows\
 gebruikt cd for service en lcd for windows\
 verander melody met Jarvis what is it you are trying
+?
 
 # 4. Bouw in melody een get request 
 Gebruik de volgende code\

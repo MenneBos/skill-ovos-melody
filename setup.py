@@ -2,7 +2,7 @@ import os
 from setuptools import setup
 from os import walk, path
 from os.path import join, dirname
-from setuptools import setup, find_packages
+# from setuptools import setup, find_packages
 
 URL = "https://github.com/MenneBos/skill-ovos-melody"
 SKILL_CLAZZ = "MelodySkill"  # needs to match __init__.py class name
@@ -50,7 +50,7 @@ def get_version():
     return version
     
 
-"""" def find_resource_files():
+def find_resource_files():
     resource_base_dirs = ("locale", "soundbytes", "ui", "vocab", "dialog", "regex", "skill")
     base_dir = path.dirname(__file__)
     package_data = ["*.json"]
@@ -62,7 +62,6 @@ def get_version():
                         path.join(directory.replace(base_dir, "").lstrip('/'),
                                   '*'))
     return package_data
-"""
 
 with open(path.join(path.abspath(path.dirname(__file__)), "README.md"), "r") as f:
     long_description = f.read()
@@ -75,11 +74,11 @@ setup(
     author='Menne',
     author_email='your.email@example.com',
     license='Apache-2.0',
+    #    packages=find_packages(include=['locale','soundbytes']),
+    package_dir={SKILL_PKG: ""},
+    package_data={SKILL_PKG: find_resource_files()},
+    packages=[SKILL_PKG],
     include_package_data=True,
-    packages=find_packages(include=['locale','soundbytes']),
-    #package_dir={SKILL_PKG: ""},
-    #package_data={SKILL_PKG: find_resource_files()},
-    #packages=[SKILL_PKG],
     keywords='ovos skill plugin',
     entry_points={'ovos.plugin.skill': PLUGIN_ENTRY_POINT}
 )
