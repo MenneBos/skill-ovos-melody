@@ -27,7 +27,8 @@ I created a folder ~/.local/share and changed the owner and group name to ovos
 I change the STT driver to chromium door mycroft.conf aan te passen
 Chromium plugin was al geinstalleerd
 
-I changed to wake word to Jarvis by mycroft.conf 
+I changed to wake word to Jarvis by mycroft.conf \
+I try to include hey mycroft aswell in the config still not working [error]\
 Openwakework plugin was al geinstalleerd
 
 I disabled WiFi, as connection is on-off and it is cabled anywat
@@ -56,6 +57,10 @@ play mp3 files with mpg123 file
 nu werkt de uitgesproken tekst en audio file goed...
 
 # 3. Download Jarvis voice records with sftp
+Ik heb de soundbytes folder in GitHub toegevoegd. In deze folder staan de genormaliseerde jarvis soundclips (wav and mp3)
+Bij een pip install komen die in ~/.venvs/ovos/lib/python3.11/site-packages/ovos_skill_melody/soundbytes
+Connect via config file met juiste pad
+
 on windows a ssh client is running\
 use sftp op windows cmdline: >sftp ovos@192.168.5.126\
 gebruikt ls for folder on service linux en lls for local op windows\
@@ -91,11 +96,21 @@ Open geluidsfile en selecteer met ctl-a
 Tab "effects" en dan geluid en normaliseer
 Experteer audiobestand als mp3 of wav
 
+# 7. verander de alarm geluid
+OVOS gebruikt ovos-skill-alerts\
+In de config file heb ik de volgende configuratie geplaatst\
+```
+  "sound_alarm": "home/ovos/.local/share/Clearly_You_Dont_Want_To_Get_Up.mp3",
+  "sound_timer": "home/ovos/.local/share/Clearly_You_Dont_Want_To_Get_Up.mp3",
+  "escalate_volume": false,
+```
+Lijkt niet te werken, de beep sound wordt nog steeds default uitgevoerd. Ook langzaam opvoeren geluid met false werkt ook niet
+Check of de config wel gevinden wordt.
+
 
 # Backlog
 | Backlog| Item|
 | ------| -----|
-|Backlog:| verander alarm met Jarvis wakeup|
 |Backlog:| bij licht commando jarvis as you wish|
 |Backlog:| Verander uitgesproken tekst in ovos als ie het niet begrijpt met impossible_to_synthesize|
 |Backlog:| Gebruikt XTTS2 om Jarvis stem te klonen: je kan de hele setup plus UI vinden bij https://github.com/BoltzmannEntropy/xtts2-ui|
