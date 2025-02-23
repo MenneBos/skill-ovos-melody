@@ -1,13 +1,13 @@
 # 1 install OVOS op Raspberry PI 4B
 
-Start ovos-messagebus.service
-No logs, found one line in skills logs
+Start ovos-messagebus.service\
+No logs, found one line in skills logs\
 Seems to be running
 
 start ovos-PHAL.service
-Found error in Phal logs
-2025-02-14 23:12:25.494 - PHAL - ovos_PHAL.service:load_plugins:94 - ERROR - failed to load PHAL plugin: ovos-PHAL-plugin-wallpaper-manager
-No GUI installed on RaspOVOS. Could be the RC of not loading wallpaper-manager
+Found error in Phal logs\
+2025-02-14 23:12:25.494 - PHAL - ovos_PHAL.service:load_plugins:94 - ERROR - failed to load PHAL plugin: ovos-PHAL-plugin-wallpaper-manager\
+No GUI installed on RaspOVOS. Could be the RC of not loading wallpaper-manager\
 ovos-phal.service in running
 
 Start ovos-audio.service
@@ -55,14 +55,15 @@ Plaats mp3 file in ./local/share
 nu werkt de uitgesproken tekst en audio file goed...
 
 # 3. Download Jarvis voice records with sftp
-on windows a ssh client is running
-use sftp op windows cmdline: >sftp ovos@192.168.5.126
-gebruikt ls for folder on service linux en lls for local op windows
-gebruikt cd for service en lcd for windows
+on windows a ssh client is running\
+use sftp op windows cmdline: >sftp ovos@192.168.5.126\
+gebruikt ls for folder on service linux en lls for local op windows\
+gebruikt cd for service en lcd for windows\
 verander melody met Jarvis what is it you are trying
 
 # 4. Bouw in melody een get request 
-Gebruik de volgende code
+Gebruik de volgende code\
+Check RbPI network Sandbox with Homey network Ziggo
 ```python
   import requests
   url = f"http://192.168.1.45/api/manager/logic/webhook/Kantoor/?tag=Menne"
@@ -72,15 +73,15 @@ Gebruik de volgende code
 ```
 
 # 5. verander I'm ready text in Jarvis startup mp3
-Het bericht dat de boot is afgerond staat in skill_ovos_boot_finished
-In deze code kan je kiezen tussen een dialog gesporken tekst of een sound.
-Plaats in conf twee regels
-"speak_ready": false,
-"ready_sound": true,
-In __init__ code op regel 191 de code vervangen met 
-self.play_audio("/home/ovos/.local/share/Voicy_Jarvis_Start_Up.mp3", False)
-Adjustment: Speak is still used even is "speak_ready": false, or removed at all.
-Check code and remove the IF statement in lines 193-194.
+Het bericht dat de boot is afgerond staat in skill_ovos_boot_finished\
+In deze code kan je kiezen tussen een dialog gesporken tekst of een sound.\
+Plaats in conf twee regels\
+"speak_ready": false,\
+"ready_sound": true,\
+In __init__ code op regel 191 de code vervangen met \
+self.play_audio("/home/ovos/.local/share/Voicy_Jarvis_Start_Up.mp3", False)\
+Adjustment: Speak is still used even is "speak_ready": false, or removed at all.\
+Check code and remove the IF statement in lines 193-194\
 play mp3 fils with mpg123 file
 
 # Backlog
