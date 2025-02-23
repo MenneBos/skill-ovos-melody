@@ -31,19 +31,21 @@ I changed to wake word to Jarvis by mycroft.conf
 Openwakework plugin was al geinstalleerd
 
 I disabled WiFi, as connection is on-off and it is cabled anywat
+```Linux
 sudo systemctl disable wpa_supplicant
 sudo systemctl stop wpa_supplicant
 sudo systemctl status wpa_supplicant
-
+```
 nu werk het goed.....
 
 
 # 2. installeren ovos-skill-melody
 Plaats mp3 file in ./local/share
-update pip
-pip uninstall ovos-skill-melody #package name can be found in METADATA in dist-info folder
-pip install git+https://github.com/MenneBos/skill-ovos-melody.git
-
+```linux
+  update pip
+  pip uninstall ovos-skill-melody #package name can be found in METADATA in dist-info folder
+  pip install git+https://github.com/MenneBos/skill-ovos-melody.git
+```
 nu werkt de uitgesproken tekst en audio file goed...
 
 # 3. Download Jarvis voice records with sftp
@@ -55,11 +57,13 @@ verander melody met Jarvis what is it you are trying
 
 # 4. Bouw in melody een get request 
 Gebruik de volgende code
+```python
   import requests
   url = f"http://192.168.1.45/api/manager/logic/webhook/Kantoor/?tag=Menne"
   url = f"http://192.168.1.45/api/manager/logic/webhook/Terre/?tag=SkyRadio"
   data = requests.get(url)
   print(data.json())
+```
 
 # 5. verander I'm ready text in Jarvis startup mp3
 Het bericht dat de boot is afgerond staat in skill_ovos_boot_finished
