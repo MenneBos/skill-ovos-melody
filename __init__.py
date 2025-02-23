@@ -2,8 +2,6 @@ from ovos_workshop.skills.ovos import OVOSSkill
 from ovos_bus_client.message import Message
 import os
 import requests
-#import subprocess
-#import subprocess
 
 class MelodySkill(OVOSSkill):
     def __init__(self):
