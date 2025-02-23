@@ -32,6 +32,7 @@ Openwakework plugin was al geinstalleerd
 
 I disabled WiFi, as connection is on-off and it is cabled anywat
 ```Linux
+```Bash
 sudo systemctl disable wpa_supplicant
 sudo systemctl stop wpa_supplicant
 sudo systemctl status wpa_supplicant
@@ -41,6 +42,11 @@ nu werk het goed.....
 
 # 2. installeren ovos-skill-melody
 Plaats mp3 file in ./local/share
+```Bash
+  update pip
+  pip uninstall ovos-skill-melody #package name can be found in METADATA in dist-info folder
+  pip install git+https://github.com/MenneBos/skill-ovos-melody.git
+```
 ```linux
   update pip
   pip uninstall ovos-skill-melody #package name can be found in METADATA in dist-info folder
