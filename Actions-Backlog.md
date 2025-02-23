@@ -36,6 +36,12 @@ sudo systemctl disable wpa_supplicant
 sudo systemctl stop wpa_supplicant
 sudo systemctl status wpa_supplicant
 ```
+this doesn't seems to avoid WiFi to satrt at reboot
+I used 
+```
+sudo rfkill block wifi
+```
+
 nu werk het goed.....
 
 
@@ -46,6 +52,7 @@ Plaats mp3 file in ./local/share
   pip uninstall ovos-skill-melody #package name can be found in METADATA in dist-info folder
   pip install git+https://github.com/MenneBos/skill-ovos-melody.git
 ```
+play mp3 files with mpg123 file
 nu werkt de uitgesproken tekst en audio file goed...
 
 # 3. Download Jarvis voice records with sftp
@@ -75,9 +82,15 @@ Plaats in conf twee regels\
 "ready_sound": true,\
 In __init__ code op regel 191 de code vervangen met \
 self.play_audio("/home/ovos/.local/share/Voicy_Jarvis_Start_Up.mp3", False)\
-Adjustment: Speak is still used even is "speak_ready": false, or removed at all.\
-Check code and remove the IF statement in lines 193-194\
-play mp3 fils with mpg123 file
+Adjustment: Speak is still used even is "speak_ready": false\
+empty the speak.dialog file\
+
+# 6. geluid normaliseren tussen speak and sound
+Ik heb de Jarvis soundbits genormailseerd met Audacity
+Open geluidsfile en selecteer met ctl-a
+Tab "effects" en dan geluid en normaliseer
+Experteer audiobestand als mp3 of wav
+
 
 # Backlog
 | Backlog| Item|
