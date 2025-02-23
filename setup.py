@@ -49,7 +49,7 @@ def get_version():
     return version
     
 
-def find_resource_files():
+"""" def find_resource_files():
     resource_base_dirs = ("locale", "soundbytes", "ui", "vocab", "dialog", "regex", "skill")
     base_dir = path.dirname(__file__)
     package_data = ["*.json"]
@@ -61,7 +61,7 @@ def find_resource_files():
                         path.join(directory.replace(base_dir, "").lstrip('/'),
                                   '*'))
     return package_data
-
+"""
 
 with open(path.join(path.abspath(path.dirname(__file__)), "README.md"), "r") as f:
     long_description = f.read()
