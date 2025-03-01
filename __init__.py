@@ -13,12 +13,10 @@ class MelodySkill(OVOSSkill):
         self.register_intent_file('PlayMelody.intent', self.handle_play_melody)
 
     def handle_play_melody(self, message: Message):
-        #self.speak_dialog("PlayMelody")
-        #self.speak_dialog("PlayMelody")
-        self.play_audio("/home/ovos/.venvs/ovos/lib/python3.11/site-packages/skill_ovos_melody/soundbytes/What_Is_It_You_Are_Trying_To_Achieve_Sir.mp3", False) 
-        url = f"http://192.168.1.45/api/manager/logic/webhook/kantoor/?tag=Terre"
+        url = f"http://192.168.1.45/api/manager/logic/webhook/Terre/?tag=SkyRadio"
         data = requests.get(url)
         print(data.json())
+        self.play_audio("/home/ovos/.venvs/ovos/lib/python3.11/site-packages/skill_ovos_melody/soundbytes/As_You_Wish.mp3", False) 
 
 def create_skill():
     return MelodySkill()
