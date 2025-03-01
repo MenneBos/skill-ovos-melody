@@ -62,13 +62,16 @@ Bij een pip install komen die in ~/.venvs/ovos/lib/python3.11/site-packages/ovos
 Update config file met juiste pad, update ovos-skill-boot-finished, deze __init.py__\
 Include MANIFEST.in file met path naar sound bytes files
 
-?
-on windows a ssh client is running\
-use sftp op windows cmdline: >sftp ovos@192.168.5.126\
-gebruikt ls for folder on service linux en lls for local op windows\
-gebruikt cd for service en lcd for windows\
-verander melody met Jarvis what is it you are trying
-?
+__Open Point\
+Sound volume low after break of alarm with reamp up volume. Top ramping up\
+Set in config to false, still not stopping and bleep is still the standard\
+Possible solution is to alter the defaults if mycroft.conf is not read. Look at ovos-skill-alert util folder and config.py
+__
+
+Alternative solution:\
+on windows a ssh client is running. Use sftp op windows cmdline: >sftp ovos@192.168.5.126. Gebruikt ls for folder on service linux en lls for local op windows\
+Gebruikt cd for service en lcd for windows. Verander melody met Jarvis what is it you are trying/
+
 
 # 4. Bouw in melody een get request 
 Gebruik de volgende code\
@@ -102,9 +105,9 @@ Experteer audiobestand als mp3 of wav
 # 7. verander de alarm geluid
 OVOS gebruikt ovos-skill-alerts\
 In de config file heb ik de volgende configuratie geplaatst\
-```
-  "sound_alarm": "home/ovos/.local/share/Clearly_You_Dont_Want_To_Get_Up.mp3",
-  "sound_timer": "home/ovos/.local/share/Clearly_You_Dont_Want_To_Get_Up.mp3",
+```home
+  "sound_alarm": "/home/ovos/.venvs/ovos/lib/python3.11/site-packages/skill_ovos_melody/soundbytes/Clearly_You_Dont_Want_To_Get_Up.mp3",
+  "sound_timer": "/home/ovos/.venvs/ovos/lib/python3.11/site-packages/skill_ovos_melody/soundbytes/Clearly_You_Dont_Want_To_Get_Up.mp3",
   "escalate_volume": false,
 ```
 Lijkt niet te werken, de beep sound wordt nog steeds default uitgevoerd. Ook langzaam opvoeren geluid met false werkt ook niet
