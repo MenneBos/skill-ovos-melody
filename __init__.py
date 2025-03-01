@@ -13,6 +13,10 @@ class MelodySkill(OVOSSkill):
         self.register_intent_file('PlayMelody.intent', self.handle_play_melody)
 
     def handle_play_melody(self, message: Message):
+        # wait=True will block the message bus until the dialog is finished
+        self.speak_dialog("hello.world", wait=True)
+        # this will speak the string without translation
+        self.speak("hello english folks")
         url = f"http://192.168.1.45/api/manager/logic/webhook/Terre/?tag=SkyRadio"
         data = requests.get(url)
         print(data.json())
